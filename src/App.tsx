@@ -7,6 +7,7 @@ import { Col, Row } from "antd";
 import Footer from "./components/footer/Footer";
 import Login from "./pages/login/Login";
 import RoadMap from "./pages/roadmap/RoadMap";
+import Blognav from "./pages/blognav/Blognav";
 function App() {
   return (
     <div>
@@ -19,11 +20,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/roadmap" element={<RoadMap />} />
+            <Route path="/blogs" element={<Blognav/>}/>
           </Routes>
         </Col>
       </Row>
       <Footer/>
-      {/* <Login/> */}
     </div>
   );
 }

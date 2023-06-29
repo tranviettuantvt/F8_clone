@@ -1,0 +1,17 @@
+@import "../../constant/color.scss";
+#blognav {
+  .a {
+    display: inline-block;
+    ul {
+      margin-top: 1.7rem;
+      text-align: center;
+      li:nth-child(4) {
+        border: none;
+        background-color: $primary-color;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
