@@ -1,0 +1,49 @@
+@import '../../constant/color.scss';
+
+@mixin btn {
+    color: $white;
+    background-color: $primary-color;
+}
+
+.header {
+    left: 0;
+    right: 0;
+    background-color: $white;
+    position: fixed;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid  $border-color;
+    z-index: 5;
+}
+
+.header__btn-f8 {
+    @include btn;
+    border-radius: 8px;
+    height: 2.8rem;
+    font-size: 1.4rem;
+    padding: 2px 8px;
+}
+
+.header__btn-login {
+    @include btn;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.header__search {
+    border: 2px solid $border-color;
+    border-radius: 20px;
+    height: 2.6rem;
+    width: 26rem;
+    &:hover {
+        border-color: $black!important;
+    }
+}
+
