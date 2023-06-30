@@ -1,49 +1,95 @@
-@import '../../constant/color.scss';
+@import "../../constant/color.scss";
 
 @mixin btn {
-    color: $white;
-    background-color: $primary-color;
+  color: $white;
+  background-color: $primary-color;
 }
 
 .header {
-    left: 0;
-    right: 0;
-    background-color: $white;
-    position: fixed;
-    padding: 1rem 1.5rem;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  position: fixed;
+  padding: 1rem 2.5rem 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid $border-color;
+  z-index: 10;
+  div:nth-child(1) {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border: 1px solid  $border-color;
-    z-index: 10;
-}
+    img {
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 12px;
+    }
+  }
+  div:nth-child(2) {
+    .header__search {
+      border: 2px solid $border-color;
+      border-radius: 20px;
+      height: 2.6rem;
+      width: 26rem;
+      &:hover {
+        border-color: $black !important;
+      }
+    }
 
-.header__btn-f8 {
-    @include btn;
-    border-radius: 8px;
-    height: 2.8rem;
-    font-size: 1.4rem;
-    padding: 2px 8px;
+    .header_outline {
+      display: none;
+    }
+  }
+}
+.header__search-icon{
+  display: none
 }
 
 .header__btn-login {
-    @include btn;
-    border-radius: 999px;
-    cursor: pointer;
-    font-weight: 600;
-    width: 8rem;
-    height: 2.5rem;
-    font-size: 1rem;
-    line-height: 1rem;
+  @include btn;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
-.header__search {
-    border: 2px solid $border-color;
-    border-radius: 20px;
-    height: 2.6rem;
-    width: 26rem;
-    &:hover {
-        border-color: $black!important;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    div:nth-child(1) {
+      display: none;
     }
+    div:nth-child(2) {
+      .header_outline {
+        font-size: 1.6rem;
+        display: inline-block;
+        margin-right: 2rem;
+      }
+    }
+  }
 }
-
+@media screen and (max-width: 767px) {
+  .header {
+    div:nth-child(1) {
+      display: none;
+    }
+    div:nth-child(2) {
+      .header_outline {
+        font-size: 1.6rem;
+        display: inline-block;
+        margin-right: 2rem;
+      }
+      .header__search {
+        display: none;
+      }
+    }
+    .header__search-icon{
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: $icon;
+      display: inline-block;
+    }
+  }
+}

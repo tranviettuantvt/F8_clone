@@ -16,6 +16,11 @@
 }
 
 .blogs__list {
+  .blogs__list__slider{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+  }
   .blogs__list__items {
     .blogs__list__items__img {
       position: relative;
@@ -61,24 +66,24 @@
     }
 
     .blogs__list__items__user {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        img {
-            width: 1.5rem;
-            height: 1.5rem;
-            border-radius: 50%;
-        }
-        h5 {
-            color: $black;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        span {
-            opacity: 0.8;
-        }
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+      }
+      h5 {
+        color: $black;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      span {
+        opacity: 0.8;
+      }
     }
-   
+
     h3 {
       margin: 0.6rem 0;
       color: $icon;
@@ -86,6 +91,63 @@
     span {
       color: $icon;
       font-weight: 500;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .blogs__list__slider {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    flex-wrap: nowrap!important;
+  }
+
+  .blogs__list__slider::-webkit-scrollbar {
+    height: 3px;
+    width: 10px;
+  }
+
+  .blogs__list__slider::-webkit-scrollbar-thumb {
+    background-color: $icon;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  
+  .blogs__list{
+    .blogs__list__slider {
+      flex-wrap: nowrap!important;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 0.5rem;
+
+      .blogs__list__items__img{
+        height: 7rem;
+      }
+    }
+  }
+ 
+
+  .blogs__list__slider::-webkit-scrollbar {
+    height: 3px;
+    width: 10px;
+  }
+
+  .blogs__list__slider::-webkit-scrollbar-thumb {
+    background-color: $icon;
+    border-radius: 12px;
+  }
+  .blogs__list {
+    .blogs__list__items {
+      h3 {
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        color: #292929;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
     }
   }
 }

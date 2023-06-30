@@ -12,7 +12,7 @@ import "./Videos.scss";
 
 const Videos: React.FC = () => {
   return (
-    <div id="videos" style={{ margin: "3rem 2rem 0" }}>
+    <div id="videos" >
       <div className="videos__title">
         <a href="">Video nổi bật</a>
         <a href="">

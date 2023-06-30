@@ -22,18 +22,18 @@ const Slider: React.FC = () => {
       <div className="slider__arrow-left" onClick={handlePrev}>
         <LeftOutlined />
       </div>
-      <Carousel ref={carouselRef} autoplay>
+      <Carousel ref={carouselRef} >
         {SliderData.map((sli) => (
           <div key={sli.id}>
             <Row className="slider" style={{ background: sli.color }}>
-              <Col span={12} className="slider__left">
+              <Col lg={12} md={20} xs={24} sm={24} className="slider__left">
                 <h2>{sli.title}</h2>
                 <p>{sli.des}</p>
                 <div>
                   <a href="">{sli.contact}</a>
                 </div>
               </Col>
-              <Col span={12} className="slider__right">
+              <Col lg={12} md={4} xs={0} sm={0} className="slider__right">
                 <a href="">
                   <img src={sli.image} alt="" />
                 </a>

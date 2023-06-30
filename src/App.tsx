@@ -1,31 +1,32 @@
-import "./App.css";
-import Headerr from "./components/header/Headerr";
-import Sidebar from "./components/sidebar/Sidebar";
+import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
-import { Col, Row } from "antd";
-import Footer from "./components/footer/Footer";
+import { useState } from "react";
 import Login from "./pages/login/Login";
 import RoadMap from "./pages/roadmap/RoadMap";
 import Blognav from "./pages/blognav/Blognav";
+import Study from "./pages/study/Study";
+import Fullstack from "./pages/fullstack/Fullstack";
+import Sidebar_Respon from "./components/sidebar_respon/Sidebar_Respon";
+import { SidebarContex } from "./context";
 function App() {
+  const [sbActive, setsbActive] = useState(false);
+
   return (
-    <div>
-      <Headerr />
-      <Row style={{marginLeft:"0.5rem"}}>
-        <Col span={1}>
-          <Sidebar />
-        </Col>
-        <Col span={23}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/roadmap" element={<RoadMap />} />
-            <Route path="/blogs" element={<Blognav/>}/>
-          </Routes>
-        </Col>
-      </Row>
-      <Footer/>
-    </div>
+    <SidebarContex.Provider value={{sbActive, setsbActive}}>
+      <div>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Fullstack />}>
+            <Route index element={<Home />} />
+            <Route path="roadmap" element={<RoadMap />} />
+            <Route path="study" element={<Study />} />
+            <Route path="blogs" element={<Blognav />} />
+          </Route>
+        </Routes>
+        <Sidebar_Respon />
+      </div>
+    </SidebarContex.Provider>
   );
 }
 

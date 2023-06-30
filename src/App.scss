@@ -1,0 +1,12 @@
+@import './constant/color.scss';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $primary-color;
+  color: $white;
+}
