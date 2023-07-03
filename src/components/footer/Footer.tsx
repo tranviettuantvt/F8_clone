@@ -5,8 +5,8 @@ const { Footer } = Layout;
 const Footerr: React.FC = () => {
   return (
     <Footer id="footer" style={{ textAlign: "center" }}>
-      <Row className="footer__first" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} justify={"center"}>
-        <Col span={4}>
+      <Row className="footer__first" gutter={[16,{ xs: 8, sm: 16, md: 24, lg: 32 }]} justify={"center"}>
+        <Col lg={6} md={24} sm={24} xs={24}>
           <div className="footer_mb">
             <img
               src="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
@@ -17,11 +17,10 @@ const Footerr: React.FC = () => {
           <ul>
             <li>Điện thoại: 0246.329.1102</li>
             <li>Email: contact@fullstack.edu.vn</li>
-            <li>Địa chỉ: Số 26 Dương Đình Nghệ, Phường</li>
-            <li>Yên Hòa, Quận Cầu Giấy, TP. Hà Nội</li>
+            <li>Địa chỉ: Số 26 Dương Đình Nghệ, Phường Yên Hòa, Quận Cầu Giấy, TP. Hà Nội</li>
           </ul>
         </Col>
-        <Col span={2}>
+        <Col lg={4} md={8} sm={24} xs={24}>
           <h3 className="footer_mb">VỀ F8</h3>
           <ul>
             <li>
@@ -41,7 +40,7 @@ const Footerr: React.FC = () => {
             </li>
           </ul>
         </Col>
-        <Col span={2}>
+        <Col lg={4} md={8} sm={24} xs={24}>
           <h3 className="footer_mb">SẢN PHẨM</h3>
           <ul>
             <li>
@@ -61,7 +60,7 @@ const Footerr: React.FC = () => {
             </li>
           </ul>
         </Col>
-        <Col span={2}>
+        <Col lg={4} md={8} sm={24} xs={24}>
           <h3 className="footer_mb">CÔNG CỤ</h3>
           <ul>
             <li>
@@ -81,7 +80,7 @@ const Footerr: React.FC = () => {
             </li>
           </ul>
         </Col>
-        <Col span={4}>
+        <Col lg={6} md={24} sm={24} xs={24}>
           <h3 className="footer_mb">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</h3>
           <ul>
             <li>
@@ -103,8 +102,8 @@ const Footerr: React.FC = () => {
         </Col>
       </Row>
       <Row className="footer__second" justify={"center"}>
-        <Col span={7} >© 2018 - 2023 F8. Nền tảng học lập trình hàng đầu Việt Nam</Col>
-        <Col span={7}>
+        <Col lg={12} md={12} sm={24} xs={24} >© 2018 - 2023 F8. Nền tảng học lập trình hàng đầu Việt Nam</Col>
+        <Col lg={12} md={12} sm={24} xs={24}>
           <a href="">
             <svg
               aria-hidden="true"

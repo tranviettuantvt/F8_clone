@@ -55,6 +55,7 @@
         background-color: #dce0e3;
         cursor: pointer;
       }
+      
     }
 
     h4 {
@@ -63,22 +64,52 @@
       color: $login_text;
     }
     .login__footer {
+      line-height: 1.2rem;
+      margin: 0 auto;
+      width: 70%;
       color: #666;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       a {
         color: #666;
       }
     }
+    .login__ps {
+      width: 100%;
+      z-index: 5;
+      position: absolute;
+      bottom: -5%;
+      left: 50%;
+      transform: translateX(-50%);
+      a{
+          color: $white;
+          text-decoration: none;
+      }
+    }
   }
-  .login__ps {
-    z-index: 5;
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    a{
-        color: $white;
-        text-decoration: none;
+  
+}
+
+@media screen and (max-width: 767px) {
+  #login {
+    .login__modal{
+      top: 47%;
+      width: 90%;
+      height: 36rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      div{
+        h4{
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .login__footer{
+      width: 96%!important;
+    }
+
+    .login__ps{
+      bottom: -8%!important;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Button, Divider } from "antd";
 import React, { memo, useContext } from "react";
 import { Input } from "antd";
 import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
@@ -20,7 +20,7 @@ const Headerr: React.FC = () => {
           Học Lập Trình Để Đi Làm
         </span>
       </div>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div style={{ display: "flex", alignItems: "center", position:"relative" }}>
         <MenuOutlined
           className="header_outline"
           onClick={() => setsbActive(true)}
@@ -31,6 +31,44 @@ const Headerr: React.FC = () => {
           placeholder="Tìm kiếm khóa học, bài viết, video, ..."
           allowClear
         />
+        <div className="header__search__menu">
+          <div><SearchOutlined /><span>Kết quả cho 'html'</span></div>
+          <div className="search__menu__title">
+            <h4>KHÓA HỌC</h4>
+            <a href=""><span>Xem thêm</span></a>
+          </div>
+          <Divider plain style={{margin:"12px s0"}}/>
+          <a className="search__menu__item" href="">
+            <img src="https://files.fullstack.edu.vn/f8-prod/courses/6.png" alt="" />
+            <span>Node ExpressJS</span>
+          </a>
+          <a className="search__menu__item" href="">
+            <img src="https://files.fullstack.edu.vn/f8-prod/courses/6.png" alt="" />
+            <span>Node ExpressJS</span>
+          </a>
+          <a className="search__menu__item" href="">
+            <img src="https://files.fullstack.edu.vn/f8-prod/courses/6.png" alt="" />
+            <span>Node ExpressJS</span>
+          </a>
+
+          <div className="search__menu__title">
+            <h4>KHÓA HỌC</h4>
+            <a href=""><span>Xem thêm</span></a>
+          </div>
+          <Divider plain style={{margin:"12px 0"}}/>
+          <a className="search__menu__item" href="">
+            <img src="https://files.fullstack.edu.vn/f8-prod/courses/6.png" alt="" />
+            <span>Node ExpressJS</span>
+          </a>
+          <a className="search__menu__item" href="">
+            <img src="https://files.fullstack.edu.vn/f8-prod/courses/6.png" alt="" />
+            <span>Node ExpressJS</span>
+          </a>
+          <a className="search__menu__item" href="">
+            <img src="https://files.fullstack.edu.vn/f8-prod/courses/6.png" alt="" />
+            <span>Node ExpressJS</span>
+          </a>
+        </div>
       </div>
       <Link to="/login" style={{display:"flex", alignItems:"center", gap:"1rem"}}>
         <SearchOutlined className="header__search-icon"/>

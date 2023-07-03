@@ -43,3 +43,12 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  #sidebar__respon{
+    .container {
+      padding-left: 1rem;
+      width: 80vw;
+    }
+  }
+}

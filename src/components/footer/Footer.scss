@@ -1,7 +1,7 @@
 @import "../../constant/color.scss";
 #footer {
   margin-top: 6rem;
-  padding: 5rem 0;
+  padding: 5rem 14rem;
   background-color: $footer_bg;
   .footer__first {
     ul {
@@ -63,4 +63,22 @@
 
 .footer_mb {
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #footer {
+    padding: 4rem 5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #footer {
+    padding: 4rem 2rem;
+    .footer__second{
+      div:nth-child(2){
+        margin-top: 2rem;
+        justify-content: flex-start;
+      }
+    }
+  }
+ 
 }

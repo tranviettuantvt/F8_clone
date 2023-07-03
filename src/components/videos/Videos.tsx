@@ -12,55 +12,59 @@ import "./Videos.scss";
 
 const Videos: React.FC = () => {
   return (
-    <div id="videos" >
+    <div id="videos">
       <div className="videos__title">
         <a href="">Video nổi bật</a>
         <a href="">
           Xem tất cả <RightOutlined />
         </a>
       </div>
-      
+
       <div className="videos__list">
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-          {Videoss.map((video) => (
-            <Col
-              className="gutter-row"
-              span={6}
-              style={{ marginTop: "2.5rem" }}
-            >
-              <div className="videos__list__items">
-                <a href="">
-
-                  <div className="videos__list__items__img">
-                    <img src={video.image} alt="" />
-                    <div className="videos__list__items__btn">
-                      <Button shape="round">Xem Video</Button>
-                    </div>
-                    <div className="videos__list__items_icon">
-                      <div>
-                        <CaretRightOutlined />
+          <div className="videos__list__slider">
+            {Videoss.map((video) => (
+              <Col
+                className="gutter-row"
+                lg={6}
+                md={12}
+                xs={12}
+                sm={12}
+                style={{ marginTop: "2.5rem" }}
+              >
+                <div className="videos__list__items">
+                  <a href="">
+                    <div className="videos__list__items__img">
+                      <img src={video.image} alt="" />
+                      <div className="videos__list__items__btn">
+                        <Button shape="round">Xem Video</Button>
                       </div>
-                      <button>11:16</button>
+                      <div className="videos__list__items_icon">
+                        <div>
+                          <CaretRightOutlined />
+                        </div>
+                        <button>11:16</button>
+                      </div>
                     </div>
-                  </div>
 
-                  <h3>{video.title}</h3>
+                    <h3>{video.title}</h3>
 
-                  <div className="videos__list__items__footer">
-                    <span>
-                      <EyeOutlined /> {video.view}
-                    </span>
-                    <span>
-                      <LikeOutlined /> {video.like}
-                    </span>
-                    <span>
-                      <MessageOutlined /> {video.mess}
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </Col>
-          ))}
+                    <div className="videos__list__items__footer">
+                      <span>
+                        <EyeOutlined /> {video.view}
+                      </span>
+                      <span>
+                        <LikeOutlined /> {video.like}
+                      </span>
+                      <span>
+                        <MessageOutlined /> {video.mess}
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </Col>
+            ))}
+          </div>
         </Row>
       </div>
     </div>

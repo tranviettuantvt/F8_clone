@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import Blognav_Item from "../../components/blognav_item/Blognav_Item";
-import { Pagination } from "antd";
-import './Blognav.scss'
+import { Row, Col } from "antd";
+import "./Blognav.scss";
 import Mypagination from "../../components/pagination/Mypagination";
 
 const Blognav: React.FC = () => {
@@ -14,15 +14,28 @@ const Blognav: React.FC = () => {
           và các kỹ thuật lập trình web.
         </p>
       </div>
-      <div className="a">
-        <Blognav_Item />
-        <Blognav_Item />
-        <Blognav_Item />
-        <Blognav_Item />
-        <Blognav_Item />
-        <Blognav_Item />
-        <Mypagination/>
-      </div>
+      <Row className="blognav__content">
+        <Col lg={16} md={24} xs={24} sm={24}>
+          <Blognav_Item />
+          <Blognav_Item />
+          <Blognav_Item />
+          <Blognav_Item />
+          <Blognav_Item />
+          <Blognav_Item />
+          <Mypagination />
+        </Col>
+        <Col className="blog__nav__tags" lg={8} md={24} xs={24} sm={24}>
+          <h3>CÁC CHỦ ĐỀ ĐƯỢC ĐỀ XUẤT</h3>
+
+          <div className="blog__nav__tags__list">
+            <button>Front-end / Mobile App</button>
+            <button>Back-end / Devops</button>
+            <button>Ux Ui / Design</button>
+            <button>ReactJS</button>
+            <button>Others</button>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };

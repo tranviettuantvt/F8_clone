@@ -1,5 +1,7 @@
 import React, { memo } from "react";
 import "./RoadMap.scss";
+import { Col, Row } from "antd";
+
 
 const RoadMap: React.FC = () => {
   return (
@@ -12,8 +14,8 @@ const RoadMap: React.FC = () => {
           trung vào lộ trình "Front-end".
         </p>
       </div>
-      <div className="roadmap__content">
-        <div className="roadmap__content__card">
+      <Row className="roadmap__content">
+        <Col lg={9} md={24} xs={24} sm={24} className="roadmap__content__card">
           <div>
             <h2>Lộ trình học Front-end</h2>
             <p>
@@ -33,8 +35,8 @@ const RoadMap: React.FC = () => {
               />
             </a>
           </div>
-        </div>
-        <div className="roadmap__content__card">
+        </Col>
+        <Col lg={9} md={24} xs={24} sm={24} className="roadmap__content__card">
           <div>
             <h2>Lộ trình học Front-end</h2>
             <p>
@@ -54,8 +56,8 @@ const RoadMap: React.FC = () => {
               />
             </a>
           </div>
-        </div>
-      </div>
+        </Col>
+      </Row>
       <div className="roadmap__community">
         <div>
           <h1>Tham gia cộng đồng học viên F8 trên Facebook</h1>

@@ -7,6 +7,7 @@
   }
   p {
     font-size: 1rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -24,6 +25,9 @@
     border-radius: 16px;
     gap: 1rem;
 
+    p {
+      line-height: 1.3rem;
+    }
     div:nth-child(1) {
       h2 {
         margin-bottom: 1rem;
@@ -54,13 +58,15 @@
 
 .roadmap__community {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 4rem;
   justify-content: space-between;
   align-items: center;
   div:nth-child(1) {
     width: 28rem;
 
     h1 {
+      font-size: 1.6rem;
+      font-weight: 900;
       margin-bottom: 1.5rem;
     }
     button {
@@ -69,7 +75,7 @@
       border: 2px solid $black;
       border-radius: 16px;
       background-color: transparent;
-      a{
+      a {
         color: $black;
       }
     }
@@ -78,7 +84,68 @@
     position: relative;
     width: 30rem;
     img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #roadmap {
+    margin-left: 1.5rem !important;
+  }
+  .roadmap__content {
+    .roadmap__content__card {
+      div:nth-child(1) {
+        button {
+          margin-top: 3rem;
+        }
+      }
+      div:nth-child(2) {
+        width: 14rem;
+      }
+    }
+  }
+  .roadmap__community {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #roadmap {
+    margin-left: 1rem !important;
+    margin-right: 1.3rem !important;
+  }
+  .roadmap__intro {
+    width: 100%;
+  }
+
+  .roadmap__content {
+    margin-top: 3rem;
+    .roadmap__content__card {
+      div:nth-child(1) {
+        button {
+          width: 100%;
+        }
+      }
+      div:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .roadmap__community{
+    margin-top: 4rem;
+    div:nth-child(1) {
+      p{
+        line-height: 1.3rem;
+      }
+      button {
         width: 100%;
+      }
+    }
+
+    div:nth-child(2) {
+      display: none;
     }
   }
 }

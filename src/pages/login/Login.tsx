@@ -47,22 +47,20 @@ const Login: React.FC = () => {
         <div className="login__footer">
           <p>
             Việc bạn tiếp tục sử dụng trang web này sẽ đồng nghĩa với việc bạn
-            đồng ý với
+            đồng ý với <a href="">Điều khoản sử dụng </a>của chúng tôi
           </p>
-          <a href="">Điều khoản sử dụng  </a>
-          <span>của chúng tôi</span>
         </div>
-      </div>
-      <div className="login__ps">
-        <span>
-          <a href="">Giới thiệu về F8 | </a>
-        </span>
-        <span>
-          <a href="">F8 trên youtube | </a>
-        </span>
-        <span>
-          <a href="">F8 trên Facebook</a>
-        </span>
+        <div className="login__ps">
+          <span>
+            <a href="">Giới thiệu về F8 | </a>
+          </span>
+          <span>
+            <a href="">F8 trên youtube | </a>
+          </span>
+          <span>
+            <a href="">F8 trên Facebook</a>
+          </span>
+        </div>
       </div>
     </div>
   );
