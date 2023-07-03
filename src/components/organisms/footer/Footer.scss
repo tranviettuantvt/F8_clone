@@ -1,0 +1,84 @@
+@import "../../../constant/color.scss";
+#footer {
+  margin-top: 6rem;
+  padding: 5rem 14rem;
+  background-color: $footer_bg;
+  .footer__first {
+    ul {
+      list-style: none;
+    }
+
+    div:nth-child(1) {
+      div {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      img {
+        border-radius: 8px;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      ul {
+        text-align: left;
+      }
+    }
+
+    div {
+      h3 {
+        text-align: left;
+        color: $white;
+      }
+      ul {
+        text-align: left;
+        color: $footer_color;
+        li {
+          margin: 0.8rem 0;
+          a {
+            color: $footer_color;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__second {
+    margin-top: 2rem;
+    div:nth-child(1) {
+      text-align: left;
+      color: $footer_color;
+    }
+    div:nth-child(2){
+        justify-content: flex-end;
+        display: flex;
+        gap: 1rem;
+        svg {
+            width: 2.3rem;
+            height: 2.3rem;
+        }
+    }
+  }
+}
+
+.footer_mb {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #footer {
+    padding: 4rem 5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #footer {
+    padding: 4rem 2rem;
+    .footer__second{
+      div:nth-child(2){
+        margin-top: 2rem;
+        justify-content: flex-start;
+      }
+    }
+  }
+ 
+}
