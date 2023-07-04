@@ -1,12 +1,25 @@
 import React, { memo, useRef } from "react";
 import { Carousel } from "antd";
 import { Col, Row } from "antd";
-import SliderData from "../../../data/slider.json";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 import "./Slider.scss";
+import Buttonn from "../../atoms/button/Buttonn";
 
-const Slider: React.FC = () => {
+interface SliderItemProps {
+  id: string;
+  title: string;
+  des: string;
+  contact: string;
+  image: string;
+  color: string;
+}
+
+interface SliderProps {
+  SliderData: SliderItemProps[];
+}
+
+const Slider: React.FC<SliderProps> = ({ SliderData }) => {
   const carouselRef = useRef<any>(null);
 
   const handlePrev = () => {
@@ -29,11 +42,18 @@ const Slider: React.FC = () => {
               <Col lg={12} md={20} xs={24} sm={24} className="slider__left">
                 <h2>{sli.title}</h2>
                 <p>{sli.des}</p>
-                <div style={{marginTop:"1rem"}}>
-                  <a href="">{sli.contact}</a>
+                <div style={{ marginTop: "1rem" }}>
+                  <a href="">
+                    <Buttonn
+                      backgroundColor="transparent"
+                      className="slider__left__btn"
+                    >
+                      {sli.contact}
+                    </Buttonn>
+                  </a>
                 </div>
               </Col>
-              <Col lg={12} md={4} xs={0} sm={0} className="slider__right" >
+              <Col lg={12} md={4} xs={0} sm={0} className="slider__right">
                 <a href="">
                   <img src={sli.image} alt="" />
                 </a>

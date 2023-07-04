@@ -1,11 +1,27 @@
 import React, { memo } from "react";
 import "./RoadMap.scss";
 import { Col, Row } from "antd";
-
+import RoadmapCard from "../../molecules/roadmapCard/RoadmapCard";
 
 const RoadMap: React.FC = () => {
+  const roadmapCards = [
+    {
+      title: "Lộ trình học",
+      content:
+        "  Lập trình viên Front-end là người xây dựng ra giao diện websites.Trong phần này F8 sẽ chia sẻ cho bạn lộ trình để trở thành lập trình viên Front-end nhé",
+      image:
+        "https://files.fullstack.edu.vn/f8-prod/learning-paths/2/63b4642136f3e.png",
+    },
+    {
+      title: "Lộ trình học",
+      content:
+        "  Lập trình viên Front-end là người xây dựng ra giao diện websites.Trong phần này F8 sẽ chia sẻ cho bạn lộ trình để trở thành lập trình viên Front-end nhé",
+      image:
+        "https://files.fullstack.edu.vn/f8-prod/learning-paths/3/63b4641535b16.png",
+    },
+  ];
   return (
-    <div id="roadmap" style={{ margin: "95px 2rem 0 3.8rem" }}>
+    <div id="roadmap" style={{ margin: "95px 1rem 0 3.8rem" }}>
       <div className="roadmap__intro">
         <h1>Lộ trình học</h1>
         <p>
@@ -15,48 +31,15 @@ const RoadMap: React.FC = () => {
         </p>
       </div>
       <Row className="roadmap__content">
-        <Col lg={9} md={24} xs={24} sm={24} className="roadmap__content__card">
-          <div>
-            <h2>Lộ trình học Front-end</h2>
-            <p>
-              Lập trình viên Front-end là người xây dựng ra giao diện websites.
-              Trong phần này F8 sẽ chia sẻ cho bạn lộ trình để trở thành lập
-              trình viên Front-end nhé.
-            </p>
-            <button>
-              <a href="">Xem chi tiết</a>
-            </button>
-          </div>
-          <div>
-            <a href="">
-              <img
-                src="https://files.fullstack.edu.vn/f8-prod/learning-paths/2/63b4642136f3e.png"
-                alt=""
-              />
-            </a>
-          </div>
-        </Col>
-        <Col lg={9} md={24} xs={24} sm={24} className="roadmap__content__card">
-          <div>
-            <h2>Lộ trình học Front-end</h2>
-            <p>
-              Lập trình viên Front-end là người xây dựng ra giao diện websites.
-              Trong phần này F8 sẽ chia sẻ cho bạn lộ trình để trở thành lập
-              trình viên Front-end nhé.
-            </p>
-            <button>
-              <a href="">Xem chi tiết</a>
-            </button>
-          </div>
-          <div>
-            <a href="">
-              <img
-                src="https://files.fullstack.edu.vn/f8-prod/learning-paths/3/63b4641535b16.png"
-                alt=""
-              />
-            </a>
-          </div>
-        </Col>
+        {roadmapCards.map((rc) => (
+          <Col lg={7} md={24} xs={24} sm={24}>
+            <RoadmapCard
+              title={rc.title}
+              content={rc.content}
+              image={rc.image}
+            />
+          </Col>
+        ))}
       </Row>
       <div className="roadmap__community">
         <div>
@@ -76,6 +59,7 @@ const RoadMap: React.FC = () => {
           />
         </div>
       </div>
+      
     </div>
   );
 };

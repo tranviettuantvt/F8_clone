@@ -1,16 +1,21 @@
 import React, { memo } from "react";
 import { RightOutlined } from "@ant-design/icons";
-import { Col, Row, Button } from "antd";
+import { Row } from "antd";
 import Blogss from "../../../data/blogs.json";
 import "./Blogs.scss";
 import { Link } from "react-router-dom";
+import BlogCard from "../../molecules/blogCard/BlogCard";
 
-const Blogs: React.FC = () => {
+interface BlogsProps{
+  title:string
+}
+
+const Blogs: React.FC<BlogsProps> = ({title}) => {
   return (
     <div id="blogs">
       <div className="blogs__title">
-        <a href="">Bài viết nổi bật</a>
-        <Link to='/blogs'>
+        <a href="">{title}</a>
+        <Link to="/blogs">
           Xem tất cả <RightOutlined />
         </Link>
       </div>
@@ -18,31 +23,14 @@ const Blogs: React.FC = () => {
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <div className="blogs__list__slider">
             {Blogss.map((blog) => (
-              <Col
-                className="gutter-row"
-                lg={6}
-                md={12}
-                xs={12}
-                sm={12}
-                style={{ marginTop: "1.5rem" }}
-              >
-                <div className="blogs__list__items">
-                  <a href="">
-                    <div className="blogs__list__items__img">
-                      <img src={blog.image} alt="" />
-                      <div className="blogs__list__items__btn">
-                        <Button shape="round">Xem bài viết</Button>
-                      </div>
-                    </div>
-                    <h3>{blog.title}</h3>
-                    <div className="blogs__list__items__user">
-                      <img src={blog.avatar} alt="" />
-                      <h5>{blog.user}</h5>
-                      <span>{blog.time}</span>
-                    </div>
-                  </a>
-                </div>
-              </Col>
+              <BlogCard
+                id={blog.id}
+                image={blog.image}
+                title={blog.title}
+                time={blog.time}
+                avatar={blog.avatar}
+                user={blog.user}
+              />
             ))}
           </div>
         </Row>

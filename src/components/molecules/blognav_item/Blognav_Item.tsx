@@ -2,16 +2,34 @@ import React, { memo } from "react";
 import { TabletOutlined, EllipsisOutlined } from "@ant-design/icons";
 import "./Blognav_Item.scss";
 
-const Blognav_Item: React.FC = () => {
+interface Blognav_ItemProps{
+  avatar:string,
+  user:string,
+  title:string,
+  content:string,
+  image:string,
+  tag:string,
+  publish: string,
+  time:string
+}
+
+const Blognav_Item: React.FC<Blognav_ItemProps> = ({avatar,
+  user,
+  title,
+  content,
+  image,
+  tag,
+  publish,
+  time,}) => {
   return (
     <div className="blognav__item">
       <div className="blognav__item__header">
         <div className="item__header__user">
           <img
-            src="https://files.fullstack.edu.vn/f8-prod/user_photos/323800/6464902b20c91.jpg"
+            src={avatar}
             alt=""
           />
-          <span>Alan King</span>
+          <span>{user}</span>
         </div>
         <div className="item__header__icon">
           <TabletOutlined />
@@ -20,19 +38,18 @@ const Blognav_Item: React.FC = () => {
       </div>
       <div className="blognav__item__content">
         <div>
-          <a href="" style={{color:"black"}}><h2>Cảm thấy khó khăn khi chuyển sang học một ngôn ngữ mới</h2></a>
+          <a href="" style={{color:"black", textDecoration:"none"}}><h2>{title}</h2></a>
           <p>
-            Tôi làm chuyên môn về phân tích dữ liệu, chủ yếu là dùng phần mềm
-            chuyên môn sâu và dùng rất nhiều SQL db, python. Hai món đó cũng...
+           {content}
           </p>
         </div>
-        <img src="https://files.fullstack.edu.vn/f8-prod/blog_posts/7256/64448752c63c4.jpg" alt="" />
+        <img src={image} alt="" />
       </div>
 
       <div className="blognav__item__footer">
-        <button>ReactJS</button>
-        <span>một tháng trước</span>
-        <span>2 phút đọc</span>
+        <button>{tag}</button>
+        <span>{publish}</span>
+        <span>{time}</span>
       </div>
     </div>
   );

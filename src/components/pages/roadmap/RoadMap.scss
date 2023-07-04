@@ -16,44 +16,7 @@
   display: flex;
   gap: 2rem;
 
-  .roadmap__content__card {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem;
-    width: 30rem;
-    border: 2px solid $border-color;
-    border-radius: 16px;
-    gap: 1rem;
-
-    p {
-      line-height: 1.3rem;
-    }
-    div:nth-child(1) {
-      h2 {
-        margin-bottom: 1rem;
-      }
-      button {
-        margin-top: 1.4rem;
-        padding: 12px 18px;
-        border-radius: 16px;
-        border: none;
-        background-color: $primary-color;
-        a {
-          color: $white;
-        }
-      }
-    }
-
-    div:nth-child(2) {
-      width: 24rem;
-      img {
-        border-radius: 50%;
-        border: 6px solid $primary-color;
-        padding: 8px;
-        width: 100%;
-      }
-    }
-  }
+  
 }
 
 .roadmap__community {

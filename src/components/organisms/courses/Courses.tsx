@@ -4,6 +4,7 @@ import { Col, Row, Button } from "antd";
 import "./Courses.scss";
 import FreeCourses from "../../../data/freeCourse.json";
 import { Link } from "react-router-dom";
+import CourseCard from "../../molecules/courseCard/CourseCard";
 
 const Courses: React.FC = () => {
   return (
@@ -18,29 +19,7 @@ const Courses: React.FC = () => {
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <div className="courses__list__slider">
             {FreeCourses.map((course) => (
-              <Col
-                className="gutter-row"
-                lg={6}
-                md={12}
-                xs={12}
-                sm={12}
-                style={{ marginTop: "1.5rem" }}
-              >
-                <div className="courses__list__items">
-                  <a href="">
-                    <div className="courses__list__items__img">
-                      <img src={course.image} alt="" />
-                      <div className="courses__list__items__btn">
-                        <Button shape="round">Xem khóa học</Button>
-                      </div>
-                    </div>
-                    <h3>{course.title}</h3>
-                    <span>
-                      <UsergroupDeleteOutlined /> {course.members}
-                    </span>
-                  </a>
-                </div>
-              </Col>
+              <CourseCard image={course.image} members={course.members} title={course.title}/>
             ))}
           </div>
         </Row>

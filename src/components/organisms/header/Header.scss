@@ -102,6 +102,11 @@
   height: 2.5rem;
   font-size: 1rem;
   line-height: 1rem;
+  &:hover {
+    opacity: 0.9;
+    color:$white!important;
+    border: none!important;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {

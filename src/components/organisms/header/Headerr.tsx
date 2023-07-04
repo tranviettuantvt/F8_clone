@@ -3,10 +3,22 @@ import React, { memo, useContext, useState } from "react";
 import { Input } from "antd";
 import { SearchOutlined, MenuOutlined } from "@ant-design/icons";
 import "./Header.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { SidebarContex } from "../../../context";
+import Buttonn from "../../atoms/button/Buttonn";
+import Search from "../../atoms/search/Search";
 
-const Headerr: React.FC = () => {
+interface HeaderrProps{
+  logo:string,
+  slogan:string,
+  inputText:string,
+  loginBtn:string
+}
+
+const Headerr: React.FC<HeaderrProps> = ({logo,
+  slogan,
+  inputText,
+  loginBtn}) => {
   const { sbActive, setsbActive } = useContext(SidebarContex);
   const [open, setOpen]=useState(false)
 
@@ -14,11 +26,11 @@ const Headerr: React.FC = () => {
     <div className="header">
       <div>
         <img
-          src="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
+          src={logo}
           alt=""
         />
         <span style={{ fontWeight: "bold", marginLeft: "1rem" }}>
-          Học Lập Trình Để Đi Làm
+          {slogan}
         </span>
       </div>
       <div style={{ display: "flex", alignItems: "center", position:"relative" }}>
@@ -26,11 +38,10 @@ const Headerr: React.FC = () => {
           className="header_outline"
           onClick={() => setsbActive(true)}
         />
-        <Input
+        <Search
           className="header__search"
           prefix={<SearchOutlined />}
-          placeholder="Tìm kiếm khóa học, bài viết, video, ..."
-          allowClear
+          placeholder={inputText}
           onChange={(e) => setOpen(e.target.value !== "")}
         />
         <div className="header__search__menu"  style={{ display: open ? "block" : "none" }}>
@@ -74,7 +85,7 @@ const Headerr: React.FC = () => {
       </div>
       <Link to="/login" style={{display:"flex", alignItems:"center", gap:"1rem"}}>
         <SearchOutlined className="header__search-icon"/>
-        <Button className="header__btn-login">Đăng nhập</Button>
+        <Buttonn  className="header__btn-login">{loginBtn}</Buttonn>
       </Link>
     </div>
   );

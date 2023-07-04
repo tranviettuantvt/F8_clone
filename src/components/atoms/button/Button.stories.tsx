@@ -5,12 +5,14 @@ export default {
   component: Buttonn,
   tags: ["autodocs"],
   argTypes: {
+    backgroundColor: { control: "color" },
   },
 };
 
 export const Search = {
   args: {
-    content: "Đăng nhập",
+    backgroundColor:"#f05123",
+    children: "Đăng nhập",
     size: "middle",
     shape:'round',
     type:'primary'

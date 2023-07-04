@@ -9,7 +9,7 @@ import Footer from "../../organisms/footer/Footer";
 const Fullstack: React.FC= () => {
   return (
     <div>
-    <Headerr />
+    <Headerr logo="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png" slogan="Học Lập Trình Để Đi Làm" inputText="Tìm kiếm khóa học, bài viết, video, ..." loginBtn="Đăng nhập"/>
     <Row style={{ marginLeft: "0.5rem" }}>
       <Col lg={1} md={0} xs={0} sm={0}>
         <Sidebar />

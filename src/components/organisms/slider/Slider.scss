@@ -23,12 +23,15 @@
       font-size: 1rem;
     }
     a {
-      color: $white;
       font-size: 1rem;
       font-weight: 600;
       border: 2px solid $white;
       padding: 7px 12px;
       border-radius: 1.5rem;
+      .slider__left__btn {
+        border: none;
+        color: $white;
+      }
     }
   }
 }
@@ -62,14 +65,14 @@
 }
 
 .slick-dots.slick-dots-bottom {
-  bottom: -0.5rem;
+  bottom: -1.5rem;
   justify-content: flex-start;
   li {
     margin: 0 16px;
   }
   button {
-    border-radius: 12px!important;
-    height: 10px!important;
+    border-radius: 12px !important;
+    height: 10px !important;
     width: 2.5rem !important;
     background-color: #9aa6af !important;
   }
@@ -90,7 +93,7 @@
     .slider__left {
       padding: 0 1rem;
       height: 16rem;
-      p{
+      p {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
@@ -98,8 +101,9 @@
       }
     }
   }
-  
-  .slider__arrow-right, .slider__arrow-left {
+
+  .slider__arrow-right,
+  .slider__arrow-left {
     display: none;
   }
 }
