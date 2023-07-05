@@ -1,5 +1,9 @@
-button{
-    &:hover {
-        opacity: 0.9;
-    }
+.btn {
+
+  &:hover {
+    opacity: 0.9;
+    color: inherit !important;
+    border-color: black !important;
+    box-shadow: none !important;
+  }
 }

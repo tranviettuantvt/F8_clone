@@ -2,16 +2,10 @@ import React, { memo} from "react";
 import {Col} from 'antd';
 import './BlogCard.scss'
 import Buttonn from "../../atoms/button/Buttonn";
+import { BlogCardProps } from "../../../constant/common";
 
 
-interface BlogCardProps {
-  id?: string;
-  image: string;
-  avatar: string;
-  title: string;
-  user: string;
-  time:string;
-}
+
 
 const BlogCard: React.FC<BlogCardProps> = ({id,
     image,

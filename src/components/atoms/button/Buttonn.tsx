@@ -23,7 +23,7 @@ const Buttonn: React.FC<ButtonProps> = ({
   return (
     <Button
       style={{ backgroundColor }}
-      className={className}
+      className={`${className} btn` }
       type={type}
       shape={shape}
       size={size}

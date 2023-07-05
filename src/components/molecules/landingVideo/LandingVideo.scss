@@ -1,0 +1,16 @@
+@import '../../../constant/color.scss';
+#landingVideo {
+  text-align: center;
+  width: 1248px;
+  h3 {
+    margin-bottom: 2rem;
+    background: $landing_hightlight;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  video {
+    border-radius: 1.5rem;
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import "./Study.scss";
 import Courses from "../../organisms/courses/Courses";
+import FreeCourses from '../../../data/freeCourse.json'
 
 const Study: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Study: React.FC = () => {
         Các khóa học được thiết kế phù hợp cho cả người mới, nhiều khóa học miễn phí, chất lượng, nội dung dễ hiểu.
         </p>
       </div>
-      <Courses />
+      <Courses title="Khóa học miễn phí" coursesList={FreeCourses}/>
       <div className="study__community">
         <div>
           <h1>Bạn đang tìm kiếm lộ trình học cho người mới?</h1>

@@ -1,0 +1,27 @@
+@import "../../../constant/color.scss";
+#landingHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  .landing_logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    img {
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 12px;
+    }
+  }
+  .landing_menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    a {
+      text-decoration: none;
+    }
+  }
+}

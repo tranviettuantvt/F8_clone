@@ -3,14 +3,7 @@ import {Col} from 'antd';
 import {  UsergroupDeleteOutlined } from "@ant-design/icons";
 import './CourseCard.scss'
 import Buttonn from "../../atoms/button/Buttonn";
-
-
-interface CourseCardProps {
-  id?: string;
-  image: string;
-  members: string;
-  title: string;
-}
+import { CourseCardProps } from "../../../constant/common";
 
 const CourseCard: React.FC<CourseCardProps> = ({id,
     image,

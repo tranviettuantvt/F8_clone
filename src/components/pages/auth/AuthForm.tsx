@@ -14,10 +14,10 @@ const AuthForm: React.FC<AuthFormProps> = ({ auth }) => {
 
   return (
     <div id="loginForm">
-       <LeftOutlined
-          className="login__modal__back"
-          onClick={() => navigate(-1)}
-        />
+      <LeftOutlined
+        className="login__modal__back"
+        onClick={() => navigate(-1)}
+      />
       {auth === 0 ? (
         <></>
       ) : (
@@ -37,17 +37,17 @@ const AuthForm: React.FC<AuthFormProps> = ({ auth }) => {
         </div>
 
         <div className="loginForm__infor__search">
-        <Select
-  defaultValue="VN +84"
-  style={{ width: 120 }}
-  optionLabelProp="value" // Use the 'value' property as the label
-  options={[
-    { value: "VN +84 ", label: "Viet Nam" },
-    { value: "AF +93 ", label: "Afghanistan" },
-    { value: "AM +374", label: "Armenia" },
-    { value: "BS +124", label: "Bahamas" },
-  ]}
-/>
+          <Select
+            defaultValue="VN +84"
+            style={{ width: 120 }}
+            optionLabelProp="value" // Use the 'value' property as the label
+            options={[
+              { value: "VN +84 ", label: "Viet Nam" },
+              { value: "AF +93 ", label: "Afghanistan" },
+              { value: "AM +374", label: "Armenia" },
+              { value: "BS +124", label: "Bahamas" },
+            ]}
+          />
           <Input
             className="header__search"
             placeholder="Số điện thoại"

@@ -7,13 +7,9 @@ import { Link, NavLink } from "react-router-dom";
 import { SidebarContex } from "../../../context";
 import Buttonn from "../../atoms/button/Buttonn";
 import Search from "../../atoms/search/Search";
+import { HeaderrProps } from "../../../constant/common";
 
-interface HeaderrProps{
-  logo:string,
-  slogan:string,
-  inputText:string,
-  loginBtn:string
-}
+
 
 const Headerr: React.FC<HeaderrProps> = ({logo,
   slogan,

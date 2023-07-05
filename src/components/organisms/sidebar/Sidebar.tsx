@@ -1,28 +1,24 @@
 import React, { memo, useState } from "react";
-import { PlusOutlined, EditOutlined, CloseOutlined } from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 import { Popover } from "antd";
-import Homesvg from "../../../assets/home_svg.svg";
-import Roapmapsvg from "../../../assets/roadmap_svg.svg";
-import Studysvg from "../../../assets/study_svg.svg";
-import Blogsvg from "../../../assets/blog_svg.svg";
 
-const content = (
-  <div className="sidebar_popOver">
-    <EditOutlined /> <span>Viet Blog</span>
-  </div>
-);
+interface SidebarItemProps {
+  id: number;
+  link: string;
+  svg: string;
+  name: string;
+}
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  sidebarItem: SidebarItemProps[];
+  sidebarPopOver: React.ReactNode;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ sidebarItem, sidebarPopOver }) => {
   const [activeItem, setActiveItem] = useState(0);
   const [rotate, setRotate] = useState(false);
-  const file_svg = [
-    { id: 0, link: "/", svg: Homesvg, name: "Home" },
-    { id: 1, link: "/roadmap", svg: Roapmapsvg, name: "Lộ trình" },
-    { id: 2, link: "/study", svg: Studysvg, name: "Học" },
-    { id: 3, link: "/blogs", svg: Blogsvg, name: "Blogs" },
-  ];
 
   const handleItemClick = (itemId: number) => {
     setActiveItem(itemId);
@@ -33,17 +29,17 @@ const Sidebar: React.FC = () => {
 
   return (
     <div className="sidebar">
-     <Popover placement="bottomLeft" content={content} trigger="click">
-      <div
-        className={`sidebar__icon ${rotate ? 'rotate' : ''}`}
-        onClick={handleClick}
-      >
-        <PlusOutlined className={`close-icon ${rotate ? 'rotate' : ''}`} />
-      </div>
-    </Popover>
+      <Popover placement="bottomLeft" content={sidebarPopOver} trigger="click">
+        <div
+          className={`sidebar__icon ${rotate ? "rotate" : ""}`}
+          onClick={handleClick}
+        >
+          <PlusOutlined className={`close-icon ${rotate ? "rotate" : ""}`} />
+        </div>
+      </Popover>
 
       <ul className="sidebar__list">
-        {file_svg.map((file) => (
+        {sidebarItem.map((file) => (
           <Link to={file.link}>
             <li
               key={file.id}

@@ -8,17 +8,10 @@ import {
 } from "@ant-design/icons";
 import "./VideoCard.scss";
 import Buttonn from "../../atoms/button/Buttonn";
+import { VideoCardProps } from "../../../constant/common";
 
-interface CourseCardProps {
-  id?: string;
-  image: string;
-  view: string;
-  title: string;
-  like: string;
-  mess: string;
-}
 
-const CourseCard: React.FC<CourseCardProps> = ({
+const VideoCard: React.FC<VideoCardProps> = ({
   id,
   image,
   view,
@@ -69,4 +62,4 @@ const CourseCard: React.FC<CourseCardProps> = ({
   );
 };
 
-export default memo(CourseCard);
+export default memo(VideoCard);

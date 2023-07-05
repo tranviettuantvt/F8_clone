@@ -1,0 +1,18 @@
+.landing_btn{
+    justify-content: center;
+    font-weight: 500 ;
+    font-size: 1.2rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    padding: 1.4rem 0px!important
+}
+
+
+.hightlight{
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(45deg, #5ebbff -33%, #a174ff 69%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
