@@ -1,0 +1,37 @@
+@import "../../../constant/color.scss";
+#landingCard {
+  color: $white;
+  background-color: $landing_float;
+  padding: 32px;
+  border-radius: 2rem;
+  p {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  .landingCard__user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+    }
+    div {
+        gap: 0rem;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: 1.2rem;
+        margin: 0;
+        font-weight: 200;
+      }
+      p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: $landing_text;
+      }
+    }
+  }
+}

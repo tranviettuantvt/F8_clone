@@ -1,4 +1,4 @@
-import React, { memo} from "react";
+import React, { memo } from "react";
 import { styled } from "styled-components";
 
 const StyledDiv = styled.div`
@@ -28,6 +28,13 @@ const StyledDiv = styled.div`
     background-color: #dce0e3;
     cursor: pointer;
   }
+  div {
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    background: pink;
+    border-radius: 50%;
+  }
 `;
 
 interface LoginBtnProps {
@@ -35,6 +42,7 @@ interface LoginBtnProps {
   className?: string;
   imglink: string;
   text: string;
+  icon?: React.ReactNode;
 }
 
 const LoginBtn: React.FC<LoginBtnProps> = ({
@@ -42,10 +50,13 @@ const LoginBtn: React.FC<LoginBtnProps> = ({
   imglink,
   imgalt,
   text,
+  icon,
 }) => {
+  console.log(icon);
+
   return (
     <StyledDiv className={className}>
-      <img src={imglink} alt={imgalt} />
+      {imglink ? <img src={imglink} alt={imgalt} /> : icon && <div>{icon}</div>}
       <span>{text}</span>
     </StyledDiv>
   );

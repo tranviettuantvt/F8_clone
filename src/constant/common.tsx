@@ -47,3 +47,10 @@ export interface LandingSectionProps{
 export interface LandingContentProps {
   landingMenu: Array<Array<string>>;
 }
+
+export interface LandingCardProps {
+  content: string;
+  avatar: string;
+  user: string;
+  course: string;
+}
