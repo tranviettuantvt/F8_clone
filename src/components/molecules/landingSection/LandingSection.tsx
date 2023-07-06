@@ -9,18 +9,29 @@ const LandingSection: React.FC<LandingSectionProps> = ({
   title,
   content,
   btnText,
+  content_ps,
+  btnText_ps,
 }) => {
   return (
-    <Col lg={12}>
       <div id="landingSection">
         <h1>{title}</h1>
-        <p>{content}</p>
-        <Buttonn size="large" className="landing_btn">
-          {btnText}
-          <RightOutlined />
-        </Buttonn>
+        <div>
+          <p>{content}</p>
+          {content_ps && <p style={{ marginTop: "1rem" }}>{content_ps}</p>}
+        </div>
+        <div className="section__btn" style={{display:"flex", gap:"1rem"}}>
+          <Buttonn size="large" className="landing_btn">
+            {btnText}
+            <RightOutlined />
+          </Buttonn>
+          {btnText_ps && (
+            <Buttonn size="large" className="landing_btn transparent">
+              {btnText_ps}
+              <RightOutlined />
+            </Buttonn>
+          )}
+        </div>
       </div>
-    </Col>
   );
 };
 

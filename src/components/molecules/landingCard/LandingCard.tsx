@@ -49,8 +49,8 @@ const LandingCard: React.FC<LandingCardProps> = ({
         <div className="landingCard__user">
           <img src={avatar} alt="" />
           <div>
-            <h3>{user}</h3>
-            <p>{course}</p>
+            <span>{user}</span>
+            <span>{course}</span>
           </div>
         </div>
       </div>

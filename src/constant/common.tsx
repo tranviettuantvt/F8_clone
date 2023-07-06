@@ -41,7 +41,9 @@ export  interface VideoCardProps {
 export interface LandingSectionProps{
     title: string,
     content: string,
-    btnText:string
+    btnText:string,
+    btnText_ps?:string,
+    content_ps?:string,
 }
 
 export interface LandingContentProps {

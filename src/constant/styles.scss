@@ -1,13 +1,24 @@
 .landing_btn{
     justify-content: center;
-    font-weight: 500 ;
-    font-size: 1.2rem;
-    width: 12rem;
+    font-weight: bold ;
+    font-size: 1.2rem!important;
+    width: 14rem;
     display: flex;
     align-items: center;
-    padding: 1.4rem 0px!important
+    padding: 1.5rem 0px!important;
+
 }
 
+.transparent {
+    color: #fff;
+    background-color: transparent;
+    border: 1.5px solid #494b52;
+    &:hover {
+        color: #fff !important;
+        border-color: #fff !important;
+
+    }
+}
 
 .hightlight{
     font-weight: 600;
@@ -15,4 +26,26 @@
     background: -webkit-linear-gradient(45deg, #5ebbff -33%, #a174ff 69%);
     -webkit-background-clip: text;
     background-clip: text;
+}
+
+
+.landing__container {
+  padding: 40px 0;
+  width: 1248px;
+  max-width: calc(100% - 32px);
+  margin: 0 auto;}
+
+  .img-decorator {
+    position: absolute;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .landing__container {
+    padding: 16px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+    .landing__container {
+        padding: 16px 0;
+      }
 }

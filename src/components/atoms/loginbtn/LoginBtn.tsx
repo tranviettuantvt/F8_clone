@@ -8,7 +8,7 @@ const StyledDiv = styled.div`
   border-radius: 44px;
   height: 2.7rem;
   line-height: 2.7rem;
-  padding-left: 16px;
+  padding-left: 20px;
   position: relative;
   text-align: center;
   width: 19rem;
@@ -32,7 +32,7 @@ const StyledDiv = styled.div`
     width: 40px;
     display: inline-block;
     height: 40px;
-    background: pink;
+    background: #8957e5;
     border-radius: 50%;
   }
 `;
@@ -40,7 +40,7 @@ const StyledDiv = styled.div`
 interface LoginBtnProps {
   imgalt?: string;
   className?: string;
-  imglink: string;
+  imglink?: string;
   text: string;
   icon?: React.ReactNode;
 }

@@ -2,6 +2,7 @@
 #landingVideo {
   text-align: center;
   width: 1248px;
+  max-width: 100%;
   h3 {
     margin-bottom: 2rem;
     background: $landing_hightlight;
@@ -9,8 +10,46 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  video {
-    border-radius: 1.5rem;
-    width: 100%;
+  div{
+    position: relative;
+    video {
+      position: relative;
+    z-index: 1;
+      border-radius: 1.5rem;
+      width: 100%;
+    }
+  
+    .square{
+      left: -28rem;
+    top: 15rem;
+    }
+    .circle{
+      right: -28rem;
+    top: 2rem;
+    }
+    .light {
+      position: absolute;
+      width: 90%;
+      left: 50%;
+      top: 30%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+ 
+}
+
+@media screen and (max-width: 768px)  {
+  #landingVideo {
+    div {
+      .circle{
+        display: none;
+      }
+
+      .square{
+        display: none;
+      }
+    }
   }
 }

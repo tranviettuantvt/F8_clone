@@ -21,7 +21,7 @@ const LandingHero: React.FC = () => {
         <Buttonn size="large" className="landing_btn">
           Học thử miễn phí <RightOutlined />
         </Buttonn>
-        <Buttonn size="large" className="landing_btn">
+        <Buttonn size="large" className="landing_btn transparent">
           Mua khóa học <RightOutlined />
         </Buttonn>
       </div>

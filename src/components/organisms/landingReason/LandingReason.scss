@@ -1,0 +1,43 @@
+@import "../../../constant/color.scss";
+
+#landingReason {
+  padding: 4rem 0;
+  margin-top: 12rem;
+  background-color: #161b22;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    color: $white;
+    margin-bottom: 1.6rem;
+  }
+  p {
+    font-size: 1.3rem;
+    color: $landing_title;
+  }
+  .landingReason__item {
+    margin-top: 4.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    div {
+      width: 3.6rem;
+      height: 3.6rem;
+      border: 1px solid black;
+      color: #8957e5;
+      font-size: 1.8rem;
+      line-height: 3.3rem;
+      border-radius: 50%;
+      background-color: #20242b;
+    }
+    h3{
+        color: $white;
+        margin: 1.3rem 0;
+        font-size: 1.8rem;
+    }
+
+    p{
+        color: $landing_text;
+        line-height: 2rem;
+    }
+  }
+}

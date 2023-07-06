@@ -28,8 +28,7 @@ export const Google = {
     args: {
       className:'login__btn',
       text:"Chuyên sâu và bài bản hơn",
-      icon: (<CheckOutlined style={{color:"while"}} />),
-
+      icon: (<CheckOutlined style={{color:"white"}} />),
     },
   };
   

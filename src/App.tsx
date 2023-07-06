@@ -12,6 +12,7 @@ import RoadMap from "./components/pages/roadmap/RoadMap";
 import Study from "./components/pages/study/Study";
 import Blognav from "./components/pages/blognav/Blognav";
 import Sidebar_Respon from "./components/organisms/sidebar_respon/Sidebar_Respon";
+import Landing from "./components/pages/landing/Landing";
 
 function App() {
   const [sbActive, setsbActive] = useState(false);
@@ -35,6 +36,7 @@ function App() {
             <Route path="study" element={<Study />} />
             <Route path="blogs" element={<Blognav />} />
           </Route>
+          <Route path="/landing" element={<Landing />}/>
         </Routes>
         <Sidebar_Respon />
       </div>

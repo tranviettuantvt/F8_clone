@@ -3,15 +3,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 3rem;
+  gap: 5.8rem;
   .landing_logo {
     text-decoration: none;
     display: flex;
     align-items: center;
     img {
-      width: 2.8rem;
-      height: 2.8rem;
-      border-radius: 12px;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 6px;
+    }
+    span {
+      line-height: 1.4rem;
     }
   }
   .landing_menu {
@@ -22,6 +25,40 @@
     font-weight: 600;
     a {
       text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #landingHeader {
+    .landing_logo{
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      span {
+        font-size: 0.8rem;
+      }
+    }
+    .landing_menu{
+      display: none;
+    }
+  }
+ 
+}
+@media screen and (max-width: 767px) {
+  #landingHeader {
+    .landing_logo{
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      span {
+        font-size: 0.8rem;
+      }
+    }
+    .landing_menu{
+      display: none;
     }
   }
 }

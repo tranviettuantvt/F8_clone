@@ -1,5 +1,7 @@
 @import "../../../constant/color.scss";
 #landingSpecific {
+  margin-top: 12rem;
+  max-width: 960px;
   padding: 28px 64px;
   background-color: #24292f;
   border-radius: 1rem;
@@ -31,7 +33,7 @@
 
         font-weight: 100;
         font-size: 1.3rem;
-        color: $landing_text;
+        color: $landing_title;
         padding: 16px 0;
       }
     }
