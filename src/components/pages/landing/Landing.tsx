@@ -211,14 +211,14 @@ const Landing: React.FC = () => {
         <LandingContent landingMenu={landingContentMenu} />
 
         <Row className="section__flashcard" justify={"space-between"}>
-          <Col lg={12} style={{ textAlign: "center",position:"relative" }} >
+          <Col lg={12} md={11} xs={24} sm={24} style={{ textAlign: "center",position:"relative" }} >
             <img
               src="https://fullstack.edu.vn/landing/htmlcss/assets/img/flashcards.png"
               alt=""
             />
             <img className="light" src="https://fullstack.edu.vn/landing/htmlcss/assets/img/flashcard-light.png" alt="" />
           </Col>
-          <Col lg={11}>
+          <Col lg={11}  md={11} xs={24} sm={24} >
             <LandingSection
               title="Không quên kiến thức với ứng dụng Flashcards"
               content="Việc ghi nhớ giờ đây không còn là vấn đề nữa. Flashcards là phương pháp ghi nhớ thông qua việc lặp lại, kiến thức trong khóa học sẽ được bạn ghi nhớ trong dài hạn."
@@ -229,7 +229,7 @@ const Landing: React.FC = () => {
         </Row>
 
         <Row className="section__differ" justify={"space-between"}>
-          <Col lg={12} style={{ textAlign: "center" }}>
+          <Col lg={12} md={13} xs={24} sm={24} style={{ textAlign: "center" }}>
             <div className="differ__content">
               {differ_btn.map((btn) => (
                 <LoginBtn
@@ -241,7 +241,7 @@ const Landing: React.FC = () => {
             </div>
             <img className="light" src="https://fullstack.edu.vn/landing/htmlcss/assets/img/glow-new.png" alt="" />
           </Col>
-          <Col lg={11}>
+          <Col lg={11} md={11} xs={24} sm={24}>
             <LandingSection
               title="Điểm khác biệt giữa khóa học Pro và Free?"
               content="Nội dung đa dạng, đầy đủ và chuyên sâu hơn. Học trên nền tảng Pro với nhiều tính năng chuyên nghiệp như: gợi ý cách làm, xem đáp án, so sánh code, chữa bài tập, ghi chú cá nhân, và nhiều tính năng Pro khác."
@@ -286,7 +286,7 @@ const Landing: React.FC = () => {
 
         <div className="landingEnd">
           <div id="landingHero">
-            <h1>
+            <h1 className="title">
               <strong className="hightlight">Bắt đầu</strong> trở thành nhà phát
               triển chuyên nghiệp?
             </h1>

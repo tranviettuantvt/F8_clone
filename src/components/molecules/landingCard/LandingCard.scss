@@ -3,11 +3,10 @@
   color: $white;
   background-color: $landing_float;
   padding: 32px;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  height: 451px;
   p {
     text-align: left;
     font-size: 1.7rem;
@@ -40,3 +39,4 @@
     }
   }
 }
+

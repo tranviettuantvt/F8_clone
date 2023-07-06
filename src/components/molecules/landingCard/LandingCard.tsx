@@ -10,7 +10,7 @@ const LandingCard: React.FC<LandingCardProps> = ({
   course,
 }) => {
   return (
-    <Col lg={12}>
+    <Col lg={12} md={12} xs={24} sm={24}>
       <div id="landingCard">
         <svg
           xmlns="http://www.w3.org/2000/svg"

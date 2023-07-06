@@ -45,7 +45,7 @@ const LandingReason: React.FC = () => {
         <p>Cách khóa học này giúp bạn thành thạo HTML CSS? </p>
         <Row style={{ marginTop: "1rem" }}  justify={"space-between"}>
           {landingReason.map((res) => (
-            <Col lg={11} className="landingReason__item">
+            <Col lg={11} md={11} sm={24} xs={24} className="landingReason__item">
                 <div>{res.icon}</div>
                 <h3>{res.title}</h3>
                 <p style={{ textAlign: "left" }}>{res.content}</p>

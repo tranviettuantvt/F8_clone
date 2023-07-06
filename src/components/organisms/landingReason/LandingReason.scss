@@ -30,6 +30,7 @@
       background-color: #20242b;
     }
     h3{
+      text-align: start;
         color: $white;
         margin: 1.3rem 0;
         font-size: 1.8rem;
@@ -38,6 +39,16 @@
     p{
         color: $landing_text;
         line-height: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px)  {
+  #landingReason{
+    margin-top: 6rem;
+    padding: 1.3rem;
+    h1{
+      font-size: 2rem;
     }
   }
 }

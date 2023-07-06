@@ -15,6 +15,7 @@
   }
   p {
     font-size: 1.3rem;
+    line-height: 1.5rem;
     color: $landing_text;
   }
   table {
@@ -35,6 +36,39 @@
         font-size: 1.3rem;
         color: $landing_title;
         padding: 16px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #landingSpecific{
+    max-width: calc(100% - 8px);
+    margin: 5rem;
+    padding: 1.5rem;
+    h1 {
+      font-size: 2rem;
+    }
+    p{
+      font-size: 1rem;
+    }
+    table {
+      tr{
+        border-top: 1px solid #30363d;
+        gap: 0rem;
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 32px);
+        td {
+          font-size: 1.1rem!important;
+          border: none!important;
+        }
+        td:nth-child(1){
+          padding-bottom: 6px;
+        }
+        td:nth-child(2){
+          padding-top: 6px;
+        }
       }
     }
   }
